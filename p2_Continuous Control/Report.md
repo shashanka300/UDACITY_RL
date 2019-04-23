@@ -1,4 +1,5 @@
 
+
 # Project 2: Continuous Control
 
 Author: [Shashanka BR](https://github.com/shashanka300)
@@ -70,7 +71,7 @@ There were many hyperparameters involved in the experiment. The value of each of
 
   The trained agent can be seen in action below:
 
-  ![trained](results/trained_agent.gif) 
+  ![trained](images/trained_agent.gif) 
 
 
 
