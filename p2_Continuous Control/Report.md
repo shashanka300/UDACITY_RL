@@ -78,7 +78,11 @@ There were many hyperparameters involved in the experiment. The value of each of
   The best performance was achieved by **DDPG** where the reward of +30 was achieved in **[Insert]** episodes. I noticed how changing every single hyperparameter contributes significantly towards getting the right results and how hard it is to identify the ones which work. The plot of the rewards across episodes is shown below:
 
   ![ddpg](images/scores_plot.png)
-
+### Model architectures of the actor and critic networks
+- **Actor**: Network that maps states -> actions.
+    Here it's a fully connected 3 layer Neural network activated using elu and thanh respectively.
+    
+- **Citic**: Network that maps (state, action) pairs -> Q-values.Its similar to the actor ie fully connected 3 layer Neural network activated by elu.
 
 ## Ideas for improvement
 
