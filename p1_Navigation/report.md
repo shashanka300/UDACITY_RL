@@ -13,7 +13,7 @@ The following report is written in four parts:
 
 - **Implementation**
 - **Results**
-- **Scope of future  improvement** 
+- **Ideas for improvement** 
 
 
 
