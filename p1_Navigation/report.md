@@ -40,7 +40,8 @@ However, the algorithm described above in its raw form is highly unstable. Two t
 - **Fixed Q-targets**: As can be seen from the equation above, the target during training itself is dependent on `w`, the parameter being updated. This leads to constantly moving targets and hurts training. The idea behind fixed q-targets is to fix the parameter `w` used in the calculation of the target, $\hat{Q}(s, a; w)$. This is achieved by having two separate networks, one is the online network being learned and the other being the target network. The weights of the target network are taken from the online network itself by freezing the model parameters for a few iterations and updating it periodically after a few steps. By freezing the parameters this way, it ensures that the target network parameters are significantly different from the online network parameters.
 - **Experience Replay**: This is the other important technique used for stabilizing training. If we keep learning from experiences as they come, then we are basically observed a sequence of observations each of which are linked to each other. This destroys the assumption of the samples being independent. In ER, we maintain a Replay Buffer of fixed size (say N). We run a few episodes and store each of the experiences in the buffer. After a fixed number of iterations, we sample a few experiences from this replay buffer and use that to calculate the loss and eventually update the parameters. Sampling randomly this way breaks the sequential nature of experiences and stabilizes learning. It also helps us use an experience more than once.
 
-Both of the above mentioned techniques were incorporated. The entire implementation was done in PyTorch. 
+Both of the above mentioned techniques were incorporated. The entire implementation was done in PyTorch.  Also, various other improvements have been proposed upon the original DQN algorithm, and this repository contains the implementations of two of those:
+
 
   ### Hyperparameters
 
@@ -48,7 +49,6 @@ Both of the above mentioned techniques were incorporated. The entire implementat
 
   | Hyperparameter                      | Value |
   | ----------------------------------- | ----- |
-
   | Number of episodes                  | 2000   |
   | Max number of timesteps per episode | 1000  |
   | Epsilon start                       | 1.0   |
@@ -57,9 +57,10 @@ Both of the above mentioned techniques were incorporated. The entire implementat
 
 
 
+
 | DQN_Result                                                                  |
 | ------------------------------| 
-![dqn](images/results.PNG) | 
+![dqn](images/dqn_scores.png) | 
 
 
 ## Ideas for improvement
