@@ -80,9 +80,9 @@ There were many hyperparameters involved in the experiment. The value of each of
   ![ddpg](images/scores_plot.png)
 ### Model architectures of the actor and critic networks
 - **Actor**: Network that maps states -> actions.
-    Here it's a fully connected 3 layer Neural network activated using elu and thanh respectively.
+    I used a two-layer neural network with 24 units in the input layer, 256 in the first hidden layer, 128 units in the second hidden layer, and 2 units in the output layer
     
-- **Citic**: Network that maps (state, action) pairs -> Q-values.Its similar to the actor ie fully connected 3 layer Neural network activated by elu.
+- **Citic**: Network that maps (state, action) pairs -> Q-values.I used a two-layer neural network with 48 units in the input layer, 256 units in the first hidden layer , 128 units in the second hidden layer, and 1 unit in the output layer.
 
 ## Ideas for improvement
 
