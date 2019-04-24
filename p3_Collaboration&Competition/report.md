@@ -86,6 +86,8 @@ There were many hyperparameters involved in the experiment. The value of each of
 
   #Results
 
+  ![MADDPG](images/result.PNG)
+
    
 
   The trained agent can be seen in action below:
