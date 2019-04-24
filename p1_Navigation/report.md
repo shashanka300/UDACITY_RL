@@ -60,7 +60,7 @@ Both of the above mentioned techniques were incorporated. The entire implementat
 
 | DQN_Result                                                                  |
 | ------------------------------| 
-![dqn](images/result.png) | 
+![dqn](images/result.PNG) | 
 
 
 ## Ideas for improvement
