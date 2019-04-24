@@ -45,7 +45,13 @@ Since we are dealing with 20 agents, I went ahead with updating the weights afte
 All of the above mentioned techniques were incorporated. The entire implementation was done in PyTorch. 
 
 Also, in my experience, I have found Batch normalization to have always improved training and hence, I added one Batch normalization layer in both actor and critic. Upon trying out both ReLU and Leaky ReLU, I found the latter to work better and hence, 
+### Model architectures of the actor and critic networks
+- **Actor**: Network that maps states -> actions.
+    I used a two-layer neural network with 24 units in the input layer, 256 in the first hidden layer, 128 units in the second hidden layer, and 2 units in the output layer
+    
+- **Citic**: Network that maps (state, action) pairs -> Q-values.I used a two-layer neural network with 48 units in the input layer, 256 units in the first hidden layer , 128 units in the second hidden layer, and 1 unit in the output layer.
 
+For faster learning, elu non-linearity was used for both networks.
 ### Hyperparameters
 
 There were many hyperparameters involved in the experiment. The value of each of them is given below:
@@ -78,11 +84,6 @@ There were many hyperparameters involved in the experiment. The value of each of
   The best performance was achieved by **DDPG** where the reward of +30 was achieved in **[Insert]** episodes. I noticed how changing every single hyperparameter contributes significantly towards getting the right results and how hard it is to identify the ones which work. The plot of the rewards across episodes is shown below:
 
   ![ddpg](images/scores_plot.png)
-### Model architectures of the actor and critic networks
-- **Actor**: Network that maps states -> actions.
-    I used a two-layer neural network with 24 units in the input layer, 256 in the first hidden layer, 128 units in the second hidden layer, and 2 units in the output layer
-    
-- **Citic**: Network that maps (state, action) pairs -> Q-values.I used a two-layer neural network with 48 units in the input layer, 256 units in the first hidden layer , 128 units in the second hidden layer, and 1 unit in the output layer.
 
 ## Ideas for improvement
 
