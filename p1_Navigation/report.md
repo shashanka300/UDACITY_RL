@@ -62,8 +62,6 @@ dimensional the out put from these is used to cal culate the value functio and t
   | Epsilon decay                       | 0.995 |
 
 
-I trained the agent using the double DQN algorithm. After training for 2000 episodes, the 100 episode reward increased to around 17 as shown below.
-
 | DDQN_Result                                                                  |
 | ------------------------------| 
 ![dqn](images/result.png) | 
